@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #E5E7ED;
+  height: 100vh;
+  margin: 0;
+  font-family: "Montserrat";
+  color: #474862;
+}
+.plott {
+/*   width: 50vw; */
+  background: white;
+  border-radius: 1em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+/*   box-shadow: 2em 2em 40px -1.7em rgba(0,0,0,0.2); */
+}
+.plot_wrapper {
+  height: 100%;
+  will-change: opacity;
+  transition: 0.2s;
+}
+.date_wrapper {
+  position: relative;
+}
+.dates {
+  position: absolute;
+  display: flex;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  width: 100%;
+  height: 20em;
+  gap: 0.7em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.9);
+  will-change: transform, opacity;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 0.2s;
+  transition-timing-function: ease;
+  top: 3em;
+  padding: 2em;
+  border-radius: 2em;
+  overflow: hidden;
+  overflow-y: scroll;
+  z-index: 10;
+}
+.dates span {
+  padding: 0.7em 1.5em;
+  border-radius: 2em;
+  background: rgba(0, 0,0, 0.1);
+  cursor: pointer;
+}
+
+.date {
+  padding: 0.5em 2em;
+  border-radius: 2em;
+  background: white;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.right {
+  display: grid;
+  place-items: center;
+}
+.plot_container {
+  width: 80%;
+  height: 80%;
+/*   background: white; */
+  display: grid;
+  grid-gap: 1.5em;
+  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-columns: 1fr 1fr;
+ 
+}
+.plott h1 {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+.header {
+/*   background: red; */
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+}
+.header h1 {
+/*   font-weight: 200; */
+  margin-bottom: 0;
+}
+.left {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 1em; 
+}
+.left span {
+  width: 60%;
+  padding: 0.5em;
+  /* background: #E5E7ED; */
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #E5E7ED;
+  border-radius: 2em;
+  transition: 0.2s;
+  transition-timing-function: ease;
+}
+.left .link {
+    border: 1px solid #625Ed7;
+    
+}
+
+.left .link a {
+    color: #474862!important;
+    text-decoration: none!important;
+}
+.left .link:hover {
+    background: #625Ed7;
+}
+.left span:hover {
+  background: #E5E7ED;
+}
+.left span.selected {
+  background: #E5E7ED;
+  transform: scale(1.1);
+}
+.d3 {
+  grid-column: 1 / -1;
+}
+
