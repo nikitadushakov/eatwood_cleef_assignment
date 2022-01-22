@@ -7,7 +7,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN mkdir static
 COPY * ./
-COPY static/* ./static
+COPY static/* ./static/
 
 RUN pip install -r requirements.txt
 EXPOSE 8002
